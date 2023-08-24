@@ -34,7 +34,7 @@ main {
 .main-content {
     display: grid;
     grid-template-columns: auto auto;
-    width: 70vw;
+    width: 72vw;
 }
 
 .app-illustration {
@@ -44,7 +44,7 @@ main {
     box-shadow: 0 0 25px hsla(0, 0%, 0%, .4);
     background-color: hsl(270, 20%, 96%);
     justify-self: right;
-    margin-right: -50px;
+    margin-right: -60px;
 }
 
 .frame-parent {
@@ -277,14 +277,15 @@ main {
 .simple-booking {
     color: hsl(271, 36%, 24%);
     font-weight: 500;
-    font-size: 2.2em;
+    font-size: 2em;
 }
 
 .paragraph {
     color: hsl(270, 7%, 64%);
     line-height: 1.5;
     word-spacing: 1px;
-    font-size: 1em;
+    font-size: .98em;
+    width: 450px;
 }
 
 .div2 {
@@ -296,4 +297,67 @@ main {
     margin-right: -190px;
     border-top-left-radius: 220px;
     border-top-right-radius: 220px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .main-content-div {
+        height: 150vh;
+    }
+
+    .main-content {
+        display: grid;
+        width: 100%;
+        justify-items: center;
+        /* align-items: center; */
+        grid-template-rows: auto auto;
+        /* background-color: red; */
+        grid-template-columns: none;
+    }
+
+    .app-illustration {
+        justify-self: center;
+        margin: 0;
+    }
+
+    .app-description-div {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .simple-booking {
+        margin-top: 11vh;
+        margin-bottom: 4vh;
+        font-size: 2.2em;
+    }
+
+    .paragraph {
+        width: 340px;
+        line-height: 1.7;
+        font-size: 1.09em;
+        margin-bottom: 5vh;
+    }
+
+    .div {
+        width: 60vw;
+        height: 80vh;
+        margin-top: 0;
+        margin-left: -12vw;
+        border-bottom-left-radius: 5px;
+    }
+
+    .div2 {
+        margin-top: 60vh;
+        margin-right: 0;
+        margin-left: 30vw;
+        width: 70vw;
+        height: 90vh;
+        border-top-right-radius: 0;
+    }
 }
